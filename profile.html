@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Profile </title>
+ <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+     
+        <div class="header-bg"></div>
+        <div class="nav-container">
+          <div class="logo">
+            <div class="logo-img">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" 
+       alt="Facebook Icon" 
+       width="100%" 
+       height="100%" 
+       style="display: block;">
+  
+            </div>
+            <div class="logo-text">
+              <h1 class="logo-title">A.C.C.F</h1>
+              <p class="logo-subtitle">All Christian Campus Fellowship</p>
+            </div>
+          </div>
+          
+          <nav>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="home.html">About</a></li>
+              <li><a href="home.html">Services</a></li>
+              <li><a href="home.html">Contact</a></li>
+              <li><a href="home.html">Profile</a></li>
+            </ul>
+          </nav>
+        </div>
+     
+      <h1>Grace & Glory</h1>
+      <div class="subtitle">"Let your light shine before others" - Matthew 5:16</div>
+    </header>
+    
+    <div class="profile-container">
+      <div class="profile-header">
+        <div class="profile-picture-container">
+          <img id="profile-image" class="profile-picture" src="/api/placeholder/150/150" alt="Profile Picture">
+          <button class="edit-photo" onclick="document.getElementById('photo-upload').click()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+            </svg>
+          </button>
+          <input type="file" id="photo-upload" accept="image/*" class="hidden" onchange="updateProfileImage(this)">
+        </div>
+        <h2 id="display-name">Your Profile</h2>
+      </div>
+      
+      <form class="profile-form" id="profile-form">
+        <div class="form-group">
+          <label for="firstname">First Name</label>
+          <input type="text" id="firstname" placeholder="Enter your first name" oninput="updateDisplayName()">
+        </div>
+        
+        <div class="form-group">
+          <label for="surname">Last Name</label>
+          <input type="text" id="surname" placeholder="Enter your last name" oninput="updateDisplayName()">
+        </div>
+        
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Choose a username">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="Enter your email address">
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="Enter your phone number">
+        </div>
+        
+        <div class="form-group">
+          <label for="church">Home Church</label>
+          <input type="text" id="church" placeholder="Enter your home church">
+        </div>
+        
+        <div class="form-group">
+          <label for="bio">About Me / Testimony</label>
+          <textarea id="bio" rows="4" placeholder="Share a brief testimony or introduction"></textarea>
+        </div>
+        
+        <div class="social-links">
+          <h3 class="social-title">Social media Handles</h3>
+          
+          <div class="social-grid">
+            <div class="form-group">
+              <label for="facebook">Facebook</label>
+              <input type="text" id="facebook" placeholder="Facebook profile URL">
+            </div>
+            
+            <div class="form-group">
+              <label for="instagram">Instagram</label>
+              <input type="text" id="instagram" placeholder="Instagram handle">
+            </div>
+            
+            <div class="form-group">
+              <label for="twitter">Twitter</label>
+              <input type="text" id="twitter" placeholder="Twitter handle">
+            </div>
+            
+            <div class="form-group">
+              <label for="youtube">YouTube</label>
+              <input type="text" id="youtube" placeholder="YouTube channel">
+            </div>
+          </div>
+        </div>
+        
+        <button type="submit" class="submit-btn">Save Profile</button>
+      </form>
+      
+      <div class="verse">
+        "I praise you because I am fearfully and wonderfully made; your works are wonderful, I know that full well." - Psalm 139:14
+      </div>
+    </div>
+    
+    <footer>
+      <p>&copy; 2025 Grace & Glory Community | "Glorify God in your body" - 1 Corinthians 6:20</p>
+    </footer>
+  </div>
+  
+  <script src="profil.js"></script>
+</body>
+</html>
